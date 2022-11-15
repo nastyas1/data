@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.QtGui import QPainter, QColor
 from PyQt5 import uic
 
+
 class Example(QDialog):
     def __init__(self):
         super().__init__()
@@ -18,15 +19,15 @@ class Example(QDialog):
             qp = QPainter()
             qp.begin(self)
             qp.setBrush(QColor(255, 255, 0))
-            qp.drawEllipse(randint(1, 250), randint(1, 250), randint(1, 250), randint(1, 250))
+            qp.drawEllipse(randint(1, 250), randint(1, 250),
+                           randint(1, 250), randint(1, 250))
             qp.end()
-        
 
     def paint(self):
         self.count = 1
         self.update()
 
- 
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = Example()
