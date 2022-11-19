@@ -1,6 +1,5 @@
-from random import randint
 import sys
-
+from random import randint
 from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.QtGui import QPainter, QColor
 from PyQt5 import uic
@@ -18,7 +17,7 @@ class Example(QDialog):
         if self.count == 1:
             qp = QPainter()
             qp.begin(self)
-            qp.setBrush(QColor(255, 255, 0))
+            qp.setBrush(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
             qp.drawEllipse(randint(1, 250), randint(1, 250),
                            randint(1, 250), randint(1, 250))
             qp.end()
