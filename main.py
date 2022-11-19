@@ -17,7 +17,8 @@ class Example(QDialog):
         if self.count == 1:
             qp = QPainter()
             qp.begin(self)
-            qp.setBrush(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
+            qp.setBrush(
+                QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
             qp.drawEllipse(randint(1, 250), randint(1, 250),
                            randint(1, 250), randint(1, 250))
             qp.end()
