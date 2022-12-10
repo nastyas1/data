@@ -24,7 +24,7 @@ def cursor():
     screen = pygame.display.set_mode(size)
     pygame.display.set_caption('Свой курсор мыши')
     all_sprites = pygame.sprite.Group()
-    cursor_image = load_image('/home/nastya/Documents/code/repo-git/arrow.png')
+    cursor_image = load_image('arrow.png')
     cursor = pygame.sprite.Sprite(all_sprites)
     cursor.image = cursor_image
     cursor.rect = cursor.image.get_rect()
